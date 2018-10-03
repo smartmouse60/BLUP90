@@ -15,5 +15,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void экспортВФРБToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
