@@ -44,5 +44,13 @@ namespace WindowsFormsApp1
             f1.Hide();
             f4.Show();
         }
+
+        private void запускИнтеграцииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            Form5 f5 = new Form5();
+            f1.Hide();
+            f5.Show();
+        }
     }
 }

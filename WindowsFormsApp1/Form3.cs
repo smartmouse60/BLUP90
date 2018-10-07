@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             Thread thread = new Thread(() => {
                 WebClient web = new WebClient();
             string url = "http://blup.su/dataport/exportfile?secret-key=4823671";
-            string save_path = "..\\..\\..\\export\\";
+            string save_path = "export\\";
             string name = date + ".json";     
             web.Headers["User-Agent"] = "Mozilla/5.0";
             web.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer", "..\\..\\..\\export\\");
+            System.Diagnostics.Process.Start("explorer", "export\\");
 
         }
 

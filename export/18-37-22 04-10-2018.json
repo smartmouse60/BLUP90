@@ -1,0 +1,71 @@
+{
+    "TEMP": {
+        "Fields": [],
+        "Data": []
+    },
+    "PIG": {
+        "Fields": [
+            "ISOD",
+            "FATHER_ISOD",
+            "MOTHER_ISOD",
+            "ANIMAL_ID",
+            "NAME",
+            "FATHER_ID",
+            "MOTHER_ID",
+            "BIRTH_DATE",
+            "BIRTH_COUNTRY_ID",
+            "BIRTH_FARM_ID",
+            "BIRTH_FARM_NAME",
+            "SEX_ID",
+            "FARM_ID",
+            "FARM_NAME",
+            "DEPART_ID",
+            "BREED_ID",
+            "BREED_NAME",
+            "BREED_BLOOD",
+            "BELONG_ID",
+            "AGE_ID",
+            "OUT_DATE",
+            "NIPPLES_LEFT",
+            "NIPPLES_RIGHT",
+            "AGE_100",
+            "AGE_100_EBV",
+            "FATBACK_67",
+            "FATBACK_67_EBV",
+            "FATBACK_1011",
+            "FATBACK_1011_EBV",
+            "MUSCLE_DEPTH",
+            "MUSCLE_DEPTH_EBV",
+            "PIGLETS",
+            "PIGLETS_EBV",
+            "NEST_WEIGHT",
+            "NEST_WEIGHT_EBV",
+            "NESTS_BIRTHDAY",
+            "PIGLETS_30",
+            "PIGLETS_30_EBV",
+            "PIGLETS_WEIGHT_30",
+            "PIGLETS_WEIGHT_30_EBV",
+            "NESTS_30"
+        ],
+        "Data": []
+    },
+    "PIG_PRODUCTIVITY": {
+        "Fields": [
+            "FATHER_ISOD",
+            "MOTHER_ISOD",
+            "COVER_DATE",
+            "FARROW_DATE",
+            "WEAN_DATE",
+            "PIGLETS_WEIGHT_30",
+            "NEST_NUMBER",
+            "PIGLETS_TOTAL",
+            "PIGLETS_ALIVE",
+            "NEST_WEIGHT_BIRTHDAY",
+            "PIGLETS_BUSINESS",
+            "PIGLETS_30",
+            "NEST_WEIGHT_30",
+            "NEST_WEIGHT_30_NORMALIZED"
+        ],
+        "Data": []
+    }
+}

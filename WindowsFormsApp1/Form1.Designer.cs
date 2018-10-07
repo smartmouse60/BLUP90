@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.программаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -205,6 +206,7 @@
             this.запускИнтеграцииToolStripMenuItem.Name = "запускИнтеграцииToolStripMenuItem";
             this.запускИнтеграцииToolStripMenuItem.Size = new System.Drawing.Size(277, 32);
             this.запускИнтеграцииToolStripMenuItem.Text = "Запуск интеграции";
+            this.запускИнтеграцииToolStripMenuItem.Click += new System.EventHandler(this.запускИнтеграцииToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -242,9 +244,10 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(987, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Модуль расчета племенной ценности методом BLUP";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
