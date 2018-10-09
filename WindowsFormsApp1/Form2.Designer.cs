@@ -47,6 +47,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Проверить соединение";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -87,7 +88,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(21, 213);
+            this.textBox3.Location = new System.Drawing.Point(26, 213);
             this.textBox3.Name = "textBox3";
             this.textBox3.PasswordChar = '#';
             this.textBox3.Size = new System.Drawing.Size(261, 30);
@@ -112,7 +113,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 111);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Скачать инструкцию по подключению БД";
+            this.button2.Text = "Открыть инструкцию по подключению БД";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Form2

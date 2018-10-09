@@ -52,6 +52,7 @@
             this.авторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.версияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.контактыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(987, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // программаToolStripMenuItem
             // 
@@ -87,25 +89,28 @@
             // создатьToolStripMenuItem
             // 
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.создатьToolStripMenuItem.Text = "Создать";
+            this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.открытьToolStripMenuItem.Text = "Открыть";
+            this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
+            this.сохранитьToolStripMenuItem.Enabled = false;
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             // 
             // выйтиToolStripMenuItem
             // 
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
-            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(193, 32);
+            this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.выйтиToolStripMenuItem.Text = "Выйти";
             this.выйтиToolStripMenuItem.Click += new System.EventHandler(this.выйтиToolStripMenuItem_Click);
             // 
@@ -115,6 +120,7 @@
             this.экспортВФРБToolStripMenuItem,
             this.импортВФБДToolStripMenuItem,
             this.историяРаботыСФБДToolStripMenuItem});
+            this.обменДаннымиToolStripMenuItem.Enabled = false;
             this.обменДаннымиToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.обменДаннымиToolStripMenuItem.Name = "обменДаннымиToolStripMenuItem";
             this.обменДаннымиToolStripMenuItem.Size = new System.Drawing.Size(188, 32);
@@ -145,6 +151,7 @@
             this.базаДанныхToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.настройкаToolStripMenuItem,
             this.сохранениеToolStripMenuItem});
+            this.базаДанныхToolStripMenuItem.Enabled = false;
             this.базаДанныхToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
             this.базаДанныхToolStripMenuItem.Size = new System.Drawing.Size(149, 32);
@@ -153,14 +160,14 @@
             // настройкаToolStripMenuItem
             // 
             this.настройкаToolStripMenuItem.Name = "настройкаToolStripMenuItem";
-            this.настройкаToolStripMenuItem.Size = new System.Drawing.Size(207, 32);
+            this.настройкаToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.настройкаToolStripMenuItem.Text = "Настройка";
             this.настройкаToolStripMenuItem.Click += new System.EventHandler(this.настройкаToolStripMenuItem_Click);
             // 
             // сохранениеToolStripMenuItem
             // 
             this.сохранениеToolStripMenuItem.Name = "сохранениеToolStripMenuItem";
-            this.сохранениеToolStripMenuItem.Size = new System.Drawing.Size(207, 32);
+            this.сохранениеToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.сохранениеToolStripMenuItem.Text = "Сохранение";
             // 
             // формыToolStripMenuItem
@@ -168,6 +175,7 @@
             this.формыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.формаToolStripMenuItem,
             this.формаCOWMILKPRToolStripMenuItem});
+            this.формыToolStripMenuItem.Enabled = false;
             this.формыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.формыToolStripMenuItem.Name = "формыToolStripMenuItem";
             this.формыToolStripMenuItem.Size = new System.Drawing.Size(97, 32);
@@ -190,6 +198,7 @@
             this.интеграцияСBLUPToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.проверкаДанныхToolStripMenuItem,
             this.запускИнтеграцииToolStripMenuItem});
+            this.интеграцияСBLUPToolStripMenuItem.Enabled = false;
             this.интеграцияСBLUPToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.интеграцияСBLUPToolStripMenuItem.Name = "интеграцияСBLUPToolStripMenuItem";
             this.интеграцияСBLUPToolStripMenuItem.Size = new System.Drawing.Size(211, 32);
@@ -214,6 +223,7 @@
             this.авторToolStripMenuItem,
             this.версияToolStripMenuItem,
             this.контактыToolStripMenuItem});
+            this.оПрограммеToolStripMenuItem.Enabled = false;
             this.оПрограммеToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
@@ -222,20 +232,24 @@
             // авторToolStripMenuItem
             // 
             this.авторToolStripMenuItem.Name = "авторToolStripMenuItem";
-            this.авторToolStripMenuItem.Size = new System.Drawing.Size(183, 32);
+            this.авторToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.авторToolStripMenuItem.Text = "Автор";
             // 
             // версияToolStripMenuItem
             // 
             this.версияToolStripMenuItem.Name = "версияToolStripMenuItem";
-            this.версияToolStripMenuItem.Size = new System.Drawing.Size(183, 32);
+            this.версияToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.версияToolStripMenuItem.Text = "Версия";
             // 
             // контактыToolStripMenuItem
             // 
             this.контактыToolStripMenuItem.Name = "контактыToolStripMenuItem";
-            this.контактыToolStripMenuItem.Size = new System.Drawing.Size(183, 32);
+            this.контактыToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.контактыToolStripMenuItem.Text = "Контакты";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -281,6 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem авторToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem версияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem контактыToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
