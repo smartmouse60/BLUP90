@@ -76,6 +76,12 @@ namespace WindowsFormsApp1
             string text = "";
 
             System.IO.File.WriteAllText("file\\"+path,"");
+<<<<<<< HEAD
+=======
+
+         
+          
+>>>>>>> parent of 60d21ed... Merge branch 'master' of https://github.com/smartmouse60/BLUP90
 
         }
         static class GlobalVars
