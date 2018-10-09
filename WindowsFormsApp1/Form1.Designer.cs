@@ -209,6 +209,7 @@
             this.проверкаДанныхToolStripMenuItem.Name = "проверкаДанныхToolStripMenuItem";
             this.проверкаДанныхToolStripMenuItem.Size = new System.Drawing.Size(277, 32);
             this.проверкаДанныхToolStripMenuItem.Text = "Проверка данных";
+            this.проверкаДанныхToolStripMenuItem.Click += new System.EventHandler(this.проверкаДанныхToolStripMenuItem_Click);
             // 
             // запускИнтеграцииToolStripMenuItem
             // 
