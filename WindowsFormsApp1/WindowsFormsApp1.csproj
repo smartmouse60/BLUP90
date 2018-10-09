@@ -35,9 +35,7 @@
     <ApplicationIcon>Resources\loading_application_arrow_2886.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
@@ -70,10 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="blupDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>blupDataSet.xsd</DependentUpon>
+    <Compile Include="COWMILK_PRODUCTIVITY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COWMILK_PRODUCTIVITY.Designer.cs">
+      <DependentUpon>COWMILK_PRODUCTIVITY.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -113,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="COWMILK_PRODUCTIVITY.resx">
+      <DependentUpon>COWMILK_PRODUCTIVITY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,20 +143,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="blupDataSet.xsc">
-      <DependentUpon>blupDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="blupDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>blupDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="blupDataSet.xss">
-      <DependentUpon>blupDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
