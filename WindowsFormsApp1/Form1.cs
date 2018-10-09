@@ -81,7 +81,38 @@ namespace WindowsFormsApp1
 
          
           
+<<<<<<< HEAD
 >>>>>>> parent of 60d21ed... Merge branch 'master' of https://github.com/smartmouse60/BLUP90
+=======
+
+        }
+        static class GlobalVars
+        {
+            public static string filename;
+        }
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            GlobalVars.filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            string fileText = System.IO.File.ReadAllText(GlobalVars.filename);
+           if (fileText != null)
+            {
+                обменДаннымиToolStripMenuItem.Enabled = true;
+                базаДанныхToolStripMenuItem.Enabled = true;
+                формыToolStripMenuItem.Enabled = true;
+                интеграцияСBLUPToolStripMenuItem.Enabled = true;
+                оПрограммеToolStripMenuItem.Enabled = true;
+                сохранитьToolStripMenuItem.Enabled = true;
+            }
+        }
+>>>>>>> parent of 809cbbd... слияние веток
+
+         
+          
+>>>>>>> parent of 1d2098f... 111
 
         }
         static class GlobalVars
