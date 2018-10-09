@@ -76,6 +76,36 @@ namespace WindowsFormsApp1
             string text = "";
 
             System.IO.File.WriteAllText("file\\"+path,"");
+<<<<<<< HEAD
+=======
+
+         
+          
+
+        }
+        static class GlobalVars
+        {
+            public static string filename;
+        }
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            GlobalVars.filename = openFileDialog1.FileName;
+            // читаем файл в строку
+            string fileText = System.IO.File.ReadAllText(GlobalVars.filename);
+           if (fileText != null)
+            {
+                обменДаннымиToolStripMenuItem.Enabled = true;
+                базаДанныхToolStripMenuItem.Enabled = true;
+                формыToolStripMenuItem.Enabled = true;
+                интеграцияСBLUPToolStripMenuItem.Enabled = true;
+                оПрограммеToolStripMenuItem.Enabled = true;
+                сохранитьToolStripMenuItem.Enabled = true;
+            }
+        }
+>>>>>>> parent of 809cbbd... слияние веток
 
          
           
