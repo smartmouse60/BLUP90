@@ -103,5 +103,13 @@ namespace WindowsFormsApp1
                 сохранитьToolStripMenuItem.Enabled = true;
             }
         }
+
+        private void проверкаДанныхToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            FormBlup1 form_blup1 = new FormBlup1();
+            f1.Hide();
+            form_blup1.Show();
+        }
     }
 }
