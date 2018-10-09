@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -15,7 +14,6 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            openFileDialog1.Filter = "Json files(*.json)|*.json|All files(*.*)|*.*";
         }
 
         private void экспортВФРБToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,56 +50,23 @@ namespace WindowsFormsApp1
             Form1 f1 = new Form1();
             Form5 f5 = new Form5();
             f1.Hide();
-            f5.Show();
+            f5.Show(); 
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void формаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form1 f1 = new Form1();
+            COWMILK cowmilk = new COWMILK();
+            f1.Hide();
+            cowmilk.Show();
         }
 
-        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void формаCOWMILKPRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            обменДаннымиToolStripMenuItem.Enabled = true;
-            базаДанныхToolStripMenuItem.Enabled = true;
-            формыToolStripMenuItem.Enabled = true;
-            интеграцияСBLUPToolStripMenuItem.Enabled = true;
-            оПрограммеToolStripMenuItem.Enabled = true;
-            сохранитьToolStripMenuItem.Enabled = true;
-
-            var mydate = DateTime.Now;
-            //DateTime date1 = new DateTime;
-            string date = mydate.ToString("H-mm-ss dd-MM-yyyy");
-            string path = date+"_open.json";
-            string text = "";
-
-            System.IO.File.WriteAllText("file\\"+path,"");
-
-         
-          
-
-        }
-        static class GlobalVars
-        {
-            public static string filename;
-        }
-        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-
-            GlobalVars.filename = openFileDialog1.FileName;
-            // читаем файл в строку
-            string fileText = System.IO.File.ReadAllText(GlobalVars.filename);
-           if (fileText != null)
-            {
-                обменДаннымиToolStripMenuItem.Enabled = true;
-                базаДанныхToolStripMenuItem.Enabled = true;
-                формыToolStripMenuItem.Enabled = true;
-                интеграцияСBLUPToolStripMenuItem.Enabled = true;
-                оПрограммеToolStripMenuItem.Enabled = true;
-                сохранитьToolStripMenuItem.Enabled = true;
-            }
+            Form1 f1 = new Form1();
+            COWMILK_PRODUCTIVITY cowmilk_pr = new COWMILK_PRODUCTIVITY();
+            f1.Hide();
+            cowmilk_pr.Show();
         }
     }
 }

@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class COWMILK_PRODUCTIVITY : Form
     {
-        public Form2()
+        public COWMILK_PRODUCTIVITY()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
